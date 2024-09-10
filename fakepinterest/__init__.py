@@ -13,8 +13,7 @@ app = Flask(__name__)
 # 2) código do banco de dados -> programa models.py
 app.config["SQLALCHEMY_DATABASE_URI"] =os.getenv("DATABASE_URL")
 
-"sqlite:///comunidade.db"
-postgresql://banco_fakepinterest_55kc_user:jr1rEXOstBPnvlPgbq7yVpgjvJynXED9@dpg-crg5q6rqf0us73dhsabg-a/banco_fakepinterest_55kc
+# "sqlite:///comunidade.db"
 
 database = SQLAlchemy(app)
 
