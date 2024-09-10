@@ -4,13 +4,18 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_bcrypt import Bcrypt
+import os
 
 
 # 1) código das páginas do website -> programa routes.py
 app = Flask(__name__)
 
 # 2) código do banco de dados -> programa models.py
-app.config["SQLALCHEMY_DATABASE_URI"] ="sqlite:///comunidade.db"
+app.config["SQLALCHEMY_DATABASE_URI"] =os.getenv("DATABASE_URL")
+
+"sqlite:///comunidade.db"
+postgresql://banco_fakepinterest_55kc_user:jr1rEXOstBPnvlPgbq7yVpgjvJynXED9@dpg-crg5q6rqf0us73dhsabg-a/banco_fakepinterest_55kc
+
 database = SQLAlchemy(app)
 
 # 3) código de sistema de login e segurança (gerenciador de passwords)
